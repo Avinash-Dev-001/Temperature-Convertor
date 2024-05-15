@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex flex-col justify-center items-center min-h-screen">
+    <div class="container-wrapper">
+        <header class="header">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row justify-between items-center">
+                
+                <nav class="nav">
+                    <div class="flex items-center justify-between w-full" id="top">
+                        <a class="logo"><span class="text-4xl bold">Temperature Converter</span></a>
+                    </div>
+                    
+                </nav>
+            </div>
+        </header>
+        
+        <div class="container main-content">
+            <h1 class="page-title">Temperature Converter</h1>
+            <div>
+                <label for="tempInput" class="input-label">Enter Temperature:</label>
+                <input type="number" id="tempInput" class="input-field" required>
+            </div>
+            <div class="select-container">
+                <label for="fromUnit" class="select-label">Convert From:</label>
+                <select id="fromUnit" class="select-field">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="select-container">
+                <label for="toUnit" class="select-label">Convert To:</label>
+                <select id="toUnit" class="select-field">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+            <button class="convert-button" onclick="convertTemperature()">Convert</button>
+            <div id="result" class="result"></div>
+        </div>
+    
+        <footer class="footer">
+            <div class="container px-5 py-8 mx-auto flex items-center justify-center sm:flex-row flex-col">
+                <p class="footer-text">©2024 Temperatures —
+                  <a href="https://instagram.com/yourusername" class="instagram-link"><i class="fab fa-instagram"></i></a>
+                  <a href="mailto:youremail@example.com" class="email-link"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
